@@ -26,15 +26,20 @@ add_action('wp_enqueue_scripts', function () {
 
 
 add_action('admin_menu', function () {
-    add_menu_page(
-        'Theme Settings',
-        'Theme Settings',
-        'manage_options',
-        'theme-settings',
-        'render_theme_settings_page',
-        'dashicons-admin-generic',
-        2
-    );
+add_menu_page(
+    'Theme Settings',
+    'Theme Settings',
+    'manage_options',
+    'theme-settings',
+    __NAMESPACE__ . '\\render_theme_settings_page',  // ✅ Correct callback reference
+    'dashicons-admin-generic',
+    2
+);
+});
+
+add_filter('upload_mimes', function ($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
 });
 
 
