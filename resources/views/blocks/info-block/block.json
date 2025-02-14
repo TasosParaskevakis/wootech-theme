@@ -1,0 +1,45 @@
+{
+    "apiVersion": 2,
+    "name": "wootech/info-block",
+    "title": "Info Block",
+    "category": "common",
+    "icon": "info",
+    "description": "A customizable info block.",
+    "supports": {
+      "html": false
+    },
+    "attributes": {
+      "title": {
+        "type": "string",
+        "default": "Default Title"
+      },
+      "icon": {
+        "type": "string",
+        "default": ""
+      },
+      "tagline": {
+        "type": "string",
+        "default": "Short Description"
+      },
+      "description": {
+        "type": "string",
+        "default": "Detailed description of the block"
+      },
+      "image": {
+        "type": "string",
+        "default": ""
+      },
+      "url": {
+        "type": "string",
+        "default": "#"
+      },
+      "position": {
+        "type": "string",
+        "default": "left"
+      }
+    },
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "style": "file:./style.css",
+    "render": "file:./info-block.php"
+  }

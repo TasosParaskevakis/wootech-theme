@@ -1,0 +1,8 @@
+{
+  "apiVersion": 2,
+  "name": "wootech/home-banner",
+  "title": "Home Banner",
+  "category": "common",
+  "editorScript": "file:./index.js",
+  "render": "file:./home-banner.blade.php"
+}

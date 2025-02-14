@@ -1,0 +1,27 @@
+# Node dependencies
+node_modules/
+public/
+storage/
+.yarn/
+.yarnrc.yml
+
+# Composer dependencies
+vendor/
+composer.lock
+
+# Log files
+*.log
+yarn.lock
+
+# WordPress files (don't commit full WP installation)
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production

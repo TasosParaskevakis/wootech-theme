@@ -1,0 +1,31 @@
+.info-block {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+  
+  .info-block.left {
+    flex-direction: row;
+  }
+  
+  .info-block.right {
+    flex-direction: row-reverse;
+  }
+  
+  .info-block img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .info-block.right img {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  
+  .info-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
