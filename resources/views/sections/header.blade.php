@@ -4,7 +4,6 @@
 
 <header x-data="{ isOpen: false }" class="bg-white border-b-4 border-gradient relative">
     <div class="container flex flex-wrap justify-between py-8">
-        <!-- Logo -->
         <a href="{{ home_url('/') }}" class="flex">
             @if($logo)
                 <img src="{{ $logo }}" width="140" height="73" alt="{{ get_bloginfo('name') }}">
@@ -13,7 +12,6 @@
             @endif
         </a>
 
-        <!-- Account Menu -->
         <div x-data="{dropdownMenu: false}" class="flex items-center md:order-2 relative">
             <span class="border-l border-gray-200 pl-4">
                 <button @click="dropdownMenu = !dropdownMenu" :class="{ 'text-blue-100': dropdownMenu }"
@@ -62,7 +60,6 @@
             </svg>
         </button>
 
-        <!-- Dynamic WordPress Menu -->
 <nav x-bind:class="!isOpen ? 'hidden' : ''"
     class="nav fixed md:static left-0 bg-slate-50 z-10 overflow-y-auto md:overflow-y-visible md:bg-transparent justify-between items-center w-full md:flex md:w-auto md:order-1 hidden"
     id="mobile-menu">
