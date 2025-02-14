@@ -205,7 +205,7 @@ function wootech_render_info_block($attributes) {
 
     $imageContainerClasses = $isRight
         ? 'inset-y-0 top-0 right-0 w-full mb-8 lg:mb-0 lg:w-1/2 lg:pl-4 lg:absolute aos-init aos-animate'
-        : 'inset-y-0 top-0 left-0 w-full mb-8 lg:mb-0 lg:w-1/2 lg:pr-4 lg:absolute aos-init aos-animate';
+        : 'inset-y-0 top-0 left-0 w-full mb-8 lg:mb-0 lg:w-1/2 lg:pr-4 lg:absolute ao   s-init aos-animate';
 
     $contentContainerClasses = $isRight
         ? 'container flex flex-wrap justify-start'
@@ -242,3 +242,12 @@ function wootech_render_info_block($attributes) {
     <?php
     return ob_get_clean();
 }
+
+#reorder add to cart button 
+
+add_action('template_redirect', function () {
+    if (is_product()) {
+        remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+        add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 15);
+    }
+});
